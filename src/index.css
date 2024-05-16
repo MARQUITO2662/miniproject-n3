@@ -1,0 +1,470 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card__image {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card__details {
+  padding: 20px;
+}
+
+.card__title {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.card__location,
+.card__type,
+.card__rating,
+.card__superhost,
+.card__guests,
+.card__beds {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.card__superhost {
+  color: green;
+}
+
+/* Estilos para los textos */
+.group-title {
+  color: #333333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29.26px;
+}
+
+/* Estilos para la imagen de fondo */
+.group-image {
+  background-image: url('image.png');
+  background-size: cover;
+  width: 394px;
+  height: 267px;
+  border-radius: 24px 0px 0px 0px;
+}
+
+/* Estilos para el espaciado entre elementos */
+.group-details {
+  margin-bottom: 16px;
+}
+
+/* Estilos para los bordes y sombras */
+.group {
+  border: 1px solid #333333;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el fondo de un grupo de elementos */
+.group-background {
+  background: #4F4F4F;
+}
+
+/* Estilos para el grupo 164 */
+.group-164 {
+  width: 96px;
+  height: 18.75px;
+  top: 46px;
+  left: 94px;
+  gap: 0px;
+  opacity: 0px;
+  background: #EB5757;
+}
+
+/* Estilos para el grupo 149 */
+.group-149 {
+  width: 297px;
+  height: 55px;
+  top: 32px;
+  left: 1047px;
+  gap: 0px;
+  border-radius: 16px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #F2F2F2;
+}
+
+/* Estilos para "12+ stays" */
+.stays-label {
+  width: 61px;
+  height: 17px;
+  top: 154px;
+  left: 1280px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px;
+  text-align: left;
+  background: #4F4F4F;
+}
+
+/* Estilos para "Stays in Finland" */
+.stays-in-finland {
+  width: 199px;
+  height: 29px;
+  top: 148px;
+  left: 91px;
+  gap: 0px;
+  opacity: 0px;
+  background: #333333;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.26px;
+  text-align: left;
+}
+
+/* Estilos para el grupo 148 */
+.group-148 {
+  width: 100px;
+  height: 28px;
+  top: 493px;
+  left: 94px;
+  gap: 0px;
+  border-radius: 12px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background: #4F4F4F;
+  border: 1px solid #4F4F4F;
+}
+
+/* Estilos para el ícono de estrella */
+.star-icon {
+  width: 24px;
+  height: 24px;
+  top: 890px;
+  left: 429px;
+  padding: 0px 0px 2px 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+/* Estilos para la calificación */
+.rating {
+  width: 30px;
+  height: 17px;
+  top: 892px;
+  left: 456px;
+  gap: 0px;
+  opacity: 0px;
+  background: #4F4F4F;
+}
+
+/* Estilos para "Rectangle 72" */
+.rectangle-72 {
+  width: 426px;
+  height: 55px;
+  top: 93px;
+  left: 97px;
+  gap: 0px;
+  border-radius: 16px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #333333;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+}
+
+/* Estilos para el grupo 153 */
+.group-153 {
+  width: 114px;
+  height: 24px;
+  top: 295px;
+  left: 118px;
+  gap: 0px;
+  opacity: 0px;
+  background: #4F4F4F;
+}
+
+/* Estilos para "Rectangle 66" */
+.rectangle-66 {
+  background: #FFFFFF;
+}
+
+/* Estilos para "Rectangle 74" */
+.rectangle-74 {
+  width: 127px;
+  height: 48px;
+  top: 97px;
+  left: 1084px;
+  gap: 0px;
+  border-radius: 16px 0px 0px 0px;
+  opacity: 0px;
+  background: #EB5757;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+}
+
+/* Estilos para "Adults Ages 13 or above" */
+.adults-label {
+  width: 114px;
+  height: 36px;
+  top: 196px;
+  left: 537px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.57px;
+  text-align: left;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+  padding: 20px;
+}
+
+/* Estilos para el campo de entrada de ubicación */
+.location-input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el campo de entrada de huéspedes */
+.guests-input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de añadir huéspedes */
+.add-guest-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilos para el botón de búsqueda */
+.search-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilos para el contenedor del logo y el menú de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333; /* Color de fondo del navbar */
+  color: #fff; /* Color del texto en el navbar */
+  position: fixed; /* Posición fija para que esté en el pie de página */
+  bottom: 0; /* Alinea el navbar al pie de la página */
+  width: 100%; /* Ancho completo del navbar */
+}
+
+/* Estilos para el logo y los enlaces del menú de navegación */
+.nav__logo,
+.nav__link {
+  color: #fff; /* Color del texto del logo y los enlaces del menú */
+  text-decoration: none;
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+/* Estilos para los enlaces del menú de navegación */
+.nav__link {
+  transition: color 0.3s ease; /* Transición suave del color del texto */
+}
+
+.nav__link:hover {
+  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  background-color: #333; /* Color de fondo del navbar */
+  color: #fff; /* Color del texto en el navbar */
+  position: fixed; /* Posición fija para que esté en el pie de página */
+  bottom: 0; /* Alinea el navbar al pie de la página */
+  width: 100%; /* Ancho completo del navbar */
+}
+
+.nav__menu {
+  display: flex;
+  list-style-type: none; /* Quita los puntos de la lista */
+  padding: 0;
+}
+
+.nav__item {
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+.nav__link {
+  color: #fff; /* Color del texto del logo y los enlaces del menú */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición suave del color del texto */
+}
+
+.nav__link:hover {
+  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.location-search {
+  display: flex;
+  align-items: center;
+}
+
+.guest-controls {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Para alinear los controles de huéspedes y búsqueda a la derecha */
+}
+
+/* Estilos para los controles */
+.location-input,
+.guests-input,
+.add-guest-button,
+.search-button {
+  margin-right: 10px; /* Espacio entre los elementos */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  margin-left: 10px; /* Ajusta el margen entre el input de ubicación y el resto de elementos */
+}
+
+/* index.css */
+
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+  /* Agrega estilos según el diseño de Figma */
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.57px;
+  text-align: left;
+  background: #333333;
+  width: 106px;
+  height: 18px;
+  top: 120px;
+  left: 123px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+/* Estilos para el grupo 151 */
+.group-151 {
+  width: 135px;
+  height: 24px;
+  top: 187px;
+  left: 118px;
+  gap: 0px;
+  opacity: 0px;
+  background: #4F4F4F;
+}
+
+/* Estilos para hacer la aplicación responsive */
+/* Agrega estilos según el diseño de Figma */
+
+.search-container, .search-button {
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #4CAF50; /* Cambia el color de fondo cuando se pasa el mouse sobre el botón */
+  color: white; /* Cambia el color del texto cuando se pasa el mouse sobre el botón */
+}
+
+
+/* Estilos para LocationCard */
+.location-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.location-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.location-card p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  color: gold;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.house-number {
+  font-size: 18px;
+}
+/* Estilos para el ícono de estrella */
+.host-info .star-icon {
+  color: gold;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+/* Estilos para el número de casa */
+.host-info .house-number {
+  font-size: 18px;
+}

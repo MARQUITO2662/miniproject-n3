@@ -500,3 +500,99 @@ body {
 }
 
 
+
+
+
+
+.search-container {
+  padding:40px;
+  margin-bottom: 40px; /* Ajuste para aumentar el espacio */
+}
+
+
+.location-search {
+  display: flex;
+  flex-direction: column; /* Colocar los elementos en columna */
+}
+
+.location-list {
+  position: absolute; /* Posicionar de manera absoluta para separarlo del flujo normal */
+  top: 100%; /* Alinear al final del elemento padre */
+  left: 0; /* Alinear con el borde izquierdo del elemento padre */
+  background-color: #fff; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde */
+  border-top: none; /* Eliminar el borde superior */
+  width: calc(100% - 2px); /* Ancho igual al elemento padre menos los bordes */
+  z-index: 1; /* Asegurar que esté por encima de otros elementos */
+}
+
+
+
+
+/* En lugar de utilizar márgenes y espaciado fijos, usaremos unidades relativas */
+
+.search-container {
+  padding: 5%; /* Ajuste del padding */
+  margin-bottom: 5%; /* Ajuste del margen inferior */
+}
+
+/* Ajuste del margen entre elementos */
+.location-input,
+.guests-input,
+.add-guest-button,
+.search-button {
+  margin-right: 2%; /* Espacio entre los elementos */
+}
+
+.search {
+  margin-left: 2%; /* Ajusta el margen entre el input de ubicación y el resto de elementos */
+}
+
+
+
+
+/* En lugar de unidades fijas como píxeles, utilizaremos unidades relativas */
+
+/* Ajuste del padding y borde */
+.location-input,
+.guests-input,
+.add-guest-button,
+.search-button {
+  padding: 1em; /* Usar unidades relativas */
+  border-radius: 0.5em; /* Ajuste del radio del borde */
+}
+
+/* Ajuste del tamaño de la fuente */
+.stays-label,
+.stays-in-finland,
+.adults-label {
+  font-size: 1em; /* Tamaño de fuente relativo */
+}
+
+
+/* Reorganización de elementos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .search-container {
+    flex-direction: column; /* Cambiar a disposición de columna */
+  }
+
+  .location-search,
+  .guest-controls {
+    margin-top: 2%; /* Ajustar margen superior para separar los grupos de controles */
+  }
+
+  .search {
+    margin-left: 0; /* Eliminar el margen izquierdo */
+  }
+
+  /* Cambiar tamaño de fuente y ajuste de márgenes para elementos de búsqueda */
+  .location-input,
+  .guests-input,
+  .add-guest-button,
+  .search-button {
+    font-size: 0.8em; /* Reducir tamaño de fuente */
+    margin-right: 0; /* Eliminar margen derecho */
+    margin-bottom: 2%; /* Ajustar margen inferior */
+  }
+}
+

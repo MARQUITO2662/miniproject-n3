@@ -22,6 +22,8 @@ const App = () => {
       .catch(error => console.error('Error fetching stays data:', error));
   }, []);
 
+  const uniqueLocations = [...new Set(staysData.map(stay => stay.city))];
+
   const handleLocationClick = (location) => {
     setSelectedLocation(location);
     setShowLocationList(false);
@@ -63,37 +65,46 @@ const App = () => {
     <div className="app">
       <Nav />
       <div className="search-container">
-        <div className="search">
-          <div className="location-search">
-            <input
-              type="text"
-              placeholder="Location"
-              className="location-input"
-              onClick={() => setShowLocationList(true)}
-              value={selectedLocation}
-              readOnly
-            />
-            {showLocationList && (
-              <LocationList locations={staysData.map(stay => stay.city)} onSelectLocation={handleLocationClick} />
-            )}
-          </div>
-          <div className="guest-controls">
-            <div className="guest-buttons-column">
-              <div className="guests-input">
-                <span>Guests</span>
-                <input type="text" value={adults + children} readOnly />
-                <span>{adults + children === 1 ? 'guest' : 'guests'}</span>
-              </div>
-              <div className="guest-buttons">
-                <span><b>Adults</b> ages <span style={{ color: '#808080' }}>13 or above</span></span>
+        <div className="location-search">
+          <input
+            type="text"
+            placeholder="Location"
+            className="location-input"
+            onClick={() => setShowLocationList(!showLocationList)}
+            value={selectedLocation}
+            readOnly
+          />
+          {showLocationList && (
+            <div className="location-list">
+              {uniqueLocations.map((city, index) => (
+                <div
+                  key={index}
+                  className="location-list-item"
+                  onClick={() => handleLocationClick(city)}
+                >
+                  {city}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="guest-controls">
+          <div className="guest-buttons-column">
+            <div className="guests-input">
+              <span>Guests: </span>
+              <input type="text" value={adults + children} readOnly />
+            </div>
+            <div className="guest-buttons">
+              <div>
+                <span><b>Adults</b> ages 13 or above</span>
                 <div className="guest-buttons-container">
                   <button onClick={handleAddAdult}>+</button>
                   <span>{adults}</span>
                   <button onClick={handleRemoveAdult}>-</button>
                 </div>
               </div>
-              <div className="guest-buttons">
-                <span><b>Children</b> ages <span style={{ color: '#808080' }}>2-12</span></span>
+              <div>
+                <span><b>Children</b> ages 2-12</span>
                 <div className="guest-buttons-container">
                   <button onClick={handleAddChildren}>+</button>
                   <span>{children}</span>
@@ -101,11 +112,11 @@ const App = () => {
                 </div>
               </div>
             </div>
-            <button className="search-button" onClick={handleSearch}>
-              <i className="fas fa-search"></i> Search
-            </button>
           </div>
         </div>
+        <button className="search-button" onClick={handleSearch}>
+          <i className="fas fa-search"></i> Search
+        </button>
       </div>
       <div className="cards">
         {filteredStays.map((stay, index) => (

@@ -275,66 +275,6 @@ body {
   cursor: pointer;
 }
 
-/* Estilos para el contenedor del logo y el menú de navegación */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #333; /* Color de fondo del navbar */
-  color: #fff; /* Color del texto en el navbar */
-  position: fixed; /* Posición fija para que esté en el pie de página */
-  bottom: 0; /* Alinea el navbar al pie de la página */
-  width: 100%; /* Ancho completo del navbar */
-}
-
-/* Estilos para el logo y los enlaces del menú de navegación */
-.nav__logo,
-.nav__link {
-  color: #fff; /* Color del texto del logo y los enlaces del menú */
-  text-decoration: none;
-  margin-right: 20px; /* Espacio entre elementos */
-}
-
-/* Estilos para los enlaces del menú de navegación */
-.nav__link {
-  transition: color 0.3s ease; /* Transición suave del color del texto */
-}
-
-.nav__link:hover {
-  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
-}
-
-.navbar {
-  display: flex;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center;
-  background-color: #333; /* Color de fondo del navbar */
-  color: #fff; /* Color del texto en el navbar */
-  position: fixed; /* Posición fija para que esté en el pie de página */
-  bottom: 0; /* Alinea el navbar al pie de la página */
-  width: 100%; /* Ancho completo del navbar */
-}
-
-.nav__menu {
-  display: flex;
-  list-style-type: none; /* Quita los puntos de la lista */
-  padding: 0;
-}
-
-.nav__item {
-  margin-right: 20px; /* Espacio entre elementos */
-}
-
-.nav__link {
-  color: #fff; /* Color del texto del logo y los enlaces del menú */
-  text-decoration: none;
-  transition: color 0.3s ease; /* Transición suave del color del texto */
-}
-
-.nav__link:hover {
-  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
-}
 
 .search {
   display: flex;
@@ -468,3 +408,95 @@ body {
 .host-info .house-number {
   font-size: 18px;
 }
+.card {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card__details {
+  padding: 20px;
+}
+
+.card__rating {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card__rating .star {
+  color: red;
+}
+
+.card__rating .rating-number {
+  margin-left: 5px;
+}
+
+
+
+/* Estilos para el contenedor del logo y el menú de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333; /* Color de fondo del navbar */
+  color: #fff; /* Color del texto en el navbar */
+  position: fixed; /* Posición fija para que esté en el pie de página */
+  bottom: 0; /* Alinea el navbar al pie de la página */
+  width: 100%; /* Ancho completo del navbar */
+}
+
+/* Estilos para el logo y los enlaces del menú de navegación */
+.nav__logo,
+.nav__link {
+  color: #fff; /* Color del texto del logo y los enlaces del menú */
+  text-decoration: none;
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+/* Estilos para los enlaces del menú de navegación */
+.nav__link {
+  transition: color 0.3s ease; /* Transición suave del color del texto */
+}
+
+.nav__link:hover {
+  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  background-color: #333; /* Color de fondo del navbar */
+  color: #fff; /* Color del texto en el navbar */
+  position: fixed; /* Posición fija para que esté en el pie de página */
+  bottom: 0; /* Alinea el navbar al pie de la página */
+  width: 100%; /* Ancho completo del navbar */
+  z-index: 1000; 
+}
+
+.nav__menu {
+  display: flex;
+  list-style-type: none; /* Quita los puntos de la lista */
+  padding: 0;
+}
+
+.nav__item {
+  margin-right: 20px; /* Espacio entre elementos */
+}
+
+.nav__link {
+  color: #fff; /* Color del texto del logo y los enlaces del menú */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición suave del color del texto */
+}
+
+.nav__link:hover {
+  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
+}
+
+

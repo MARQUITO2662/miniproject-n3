@@ -10,7 +10,10 @@ const Card = ({ stay }) => {
         <h2 className="card__title">{title}</h2>
         <p className="card__location">{city}, {country}</p>
         <p className="card__type">{type}</p>
-        <p className="card__rating">Rating: {rating}</p>
+        <div className="card__rating">
+          <span className="star">&#9733;</span>
+          <span className="rating-number">{rating}</span>
+        </div>
         {superHost && (
           <p className="card__superhost">Superhost</p>
         )}

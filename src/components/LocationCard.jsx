@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LocationCard = ({ location }) => {
+const LocationCard = ({ location, numberOfStays }) => {
   const { city, superHost, title } = location;
 
   return (
@@ -10,7 +10,7 @@ const LocationCard = ({ location }) => {
       {superHost && (
         <div className="host-info">
           <span className="star-icon">&#9733;</span>
-          <span className="house-number">1</span>
+          <span className="house-number">{numberOfStays}</span>
         </div>
       )}
     </div>

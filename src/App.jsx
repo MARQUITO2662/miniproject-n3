@@ -92,7 +92,11 @@ const App = () => {
           <div className="guest-buttons-column">
             <div className="guests-input">
               <span>Guests: </span>
-              <input type="text" value={adults + children} readOnly />
+              <input 
+                type="text" 
+                value={`${adults + children} ${adults + children === 1 ? 'guest' : 'guests'}`} 
+                readOnly 
+              />
             </div>
             <div className="guest-buttons">
               <div>

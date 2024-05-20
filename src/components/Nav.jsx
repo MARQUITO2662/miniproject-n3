@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../const.jpg'; // Ruta de la imagen
 
 const Nav = () => {
   const handleHomeClick = () => {
@@ -18,7 +19,9 @@ const Nav = () => {
 
   return (
     <header className="navbar">
-      <div className="nav__logo">Your Logo</div>
+      <div className="nav__logo">
+        <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} />
+      </div>
       <ul className="nav__menu">
         <li className="nav__item"><a href="#" className="nav__link" onClick={handleHomeClick}>Home</a></li>
         <li className="nav__item"><a href="#" className="nav__link" onClick={handleAboutClick}>About</a></li>

@@ -440,7 +440,7 @@ body {
   align-items: center;
   padding: 20px;
   background-color: #333; /* Color de fondo del navbar */
-  color: #fff; /* Color del texto en el navbar */
+  color: #151212; /* Color del texto en el navbar */
   position: fixed; /* Posición fija para que esté en el pie de página */
   bottom: 0; /* Alinea el navbar al pie de la página */
   width: 100%; /* Ancho completo del navbar */
@@ -449,7 +449,7 @@ body {
 /* Estilos para el logo y los enlaces del menú de navegación */
 .nav__logo,
 .nav__link {
-  color: #fff; /* Color del texto del logo y los enlaces del menú */
+  color: #0e0c0c; /* Color del texto del logo y los enlaces del menú */
   text-decoration: none;
   margin-right: 20px; /* Espacio entre elementos */
 }
@@ -467,8 +467,8 @@ body {
   display: flex;
   justify-content: center; /* Centra los elementos horizontalmente */
   align-items: center;
-  background-color: #333; /* Color de fondo del navbar */
-  color: #fff; /* Color del texto en el navbar */
+  background-color: transparent; /* Color de fondo del navbar */
+  color: #0e0c0c; /* Color del texto en el navbar */
   position: fixed; /* Posición fija para que esté en el pie de página */
   bottom: 0; /* Alinea el navbar al pie de la página */
   width: 100%; /* Ancho completo del navbar */
@@ -486,13 +486,13 @@ body {
 }
 
 .nav__link {
-  color: #fff; /* Color del texto del logo y los enlaces del menú */
+  color: #050505; /* Color del texto del logo y los enlaces del menú */
   text-decoration: none;
   transition: color 0.3s ease; /* Transición suave del color del texto */
 }
 
 .nav__link:hover {
-  color: #ff0; /* Color del texto al pasar el mouse sobre los enlaces */
+  color: rgb(13, 26, 213); /* Color del texto al pasar el mouse sobre los enlaces */
 }
 
 
@@ -761,6 +761,7 @@ body {
   z-index: 2; /* Coloca el contenido por encima de la capa */
   /* Agrega otros estilos necesarios para el contenido de la tarjeta */
 }
+
 
 
 

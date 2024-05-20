@@ -5,6 +5,7 @@ const Card = ({ stay }) => {
 
   return (
     <div className="card">
+      <div className="card__overlay"></div> {/* Agregamos un overlay transparente */}
       <img src={photo} alt={title} className="card__image" />
       <div className="card__details">
         <h2 className="card__title">{title}</h2>

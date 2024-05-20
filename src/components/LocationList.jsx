@@ -1,5 +1,7 @@
 // LocationList.jsx
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const LocationList = ({ locations, onSelectLocation }) => {
   // Utilizamos un conjunto (Set) para almacenar ubicaciones únicas
@@ -9,7 +11,7 @@ const LocationList = ({ locations, onSelectLocation }) => {
     <ul>
       {uniqueLocations.map((location, index) => (
         <li key={index} onClick={() => onSelectLocation(location)}>
-          {location}
+          <FontAwesomeIcon icon={faMapMarkerAlt} /> {location}
         </li>
       ))}
     </ul>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Card from './components/Card';
 import Nav from './components/Nav';
 import LocationList from './components/LocationList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
   const [staysData, setStaysData] = useState([]);
@@ -12,52 +14,33 @@ const App = () => {
   const [children, setChildren] = useState(0);
 
   useEffect(() => {
-    // Obtener datos de stays.json
     fetch('stays.json')
       .then(response => response.json())
       .then(data => {
         setStaysData(data);
-        setFilteredStays(data); // Inicialmente, mostrar todas las estancias
+        setFilteredStays(data);
       })
       .catch(error => console.error('Error fetching stays data:', error));
   }, []);
 
-  const uniqueLocations = [...new Set(staysData.map(stay => stay.city))];
+  const uniqueLocations = Array.from(new Set(staysData.map(stay => stay.city)));
 
   const handleLocationClick = (location) => {
     setSelectedLocation(location);
     setShowLocationList(false);
   };
 
-  const handleAddAdult = () => {
-    setAdults(prevAdults => prevAdults + 1);
-  };
-
-  const handleRemoveAdult = () => {
-    setAdults(prevAdults => Math.max(0, prevAdults - 1));
-  };
-
-  const handleAddChildren = () => {
-    setChildren(prevChildren => prevChildren + 1);
-  };
-
-  const handleRemoveChildren = () => {
-    setChildren(prevChildren => Math.max(0, prevChildren - 1));
-  };
+  const handleAddAdult = () => setAdults(prev => prev + 1);
+  const handleRemoveAdult = () => setAdults(prev => Math.max(0, prev - 1));
+  const handleAddChildren = () => setChildren(prev => prev + 1);
+  const handleRemoveChildren = () => setChildren(prev => Math.max(0, prev - 1));
 
   const handleSearch = () => {
-    // Filtrar los datos de estancias basados en los criterios de búsqueda
     const filteredStays = staysData.filter(stay => {
-      // Lógica de filtrado basada en los criterios de búsqueda
       const locationMatch = stay.city.toLowerCase().includes(selectedLocation.toLowerCase());
-      const guestsMatch = (stay.maxGuests >= (adults + children));
-      // Agrega más criterios de filtrado si es necesario
-
-      // Retornar true si todas las condiciones se cumplen
+      const guestsMatch = stay.maxGuests >= (adults + children);
       return locationMatch && guestsMatch;
     });
-
-    // Actualizar el estado de las estancias filtradas para mostrarlas en los resultados
     setFilteredStays(filteredStays);
   };
 
@@ -82,7 +65,7 @@ const App = () => {
                   className="location-list-item"
                   onClick={() => handleLocationClick(city)}
                 >
-                  {city}
+                  <FontAwesomeIcon icon={faMapMarkerAlt} /> {city}
                 </div>
               ))}
             </div>
@@ -119,7 +102,7 @@ const App = () => {
           </div>
         </div>
         <button className="search-button" onClick={handleSearch}>
-          <i className="fas fa-search"></i> Search
+          <FontAwesomeIcon icon={faSearch} /> Search
         </button>
       </div>
       <div className="cards">
